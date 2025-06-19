@@ -3,105 +3,299 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio - BTS SIO</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Kylian Brocail - Portfolio BTS SIO SISR | Spécialiste Infrastructure & Réseaux</title>
+    <meta name="description" content="Portfolio professionnel de Kylian Brocail, étudiant BTS SIO SISR. Découvrez mes compétences en administration réseau, cybersécurité et infrastructure système.">
+    <meta name="keywords" content="BTS SIO SISR, portfolio, infrastructure réseau, cybersécurité, administration système, étudiant informatique">
+    <meta name="author" content="Kylian Brocail">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Kylian Brocail - Portfolio BTS SIO SISR">
+    <meta property="og:description" content="Spécialiste en Solutions d'Infrastructure, Systèmes et Réseaux">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Mon Portfolio - BTS SIO</h1>
-        <nav>
-            <ul>
-                <li><a href="#presentation">Présentation</a></li>
-                <li><a href="#experiences">Mes expériences en stage</a></li>
-                <li><a href="#projets">Mes réalisations</a></li>
-                <li><a href="#veille">Veille technologique et compétences</a></li>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo animate-logo">
+                <i class="fas fa-laptop-code"></i>
+                Portfolio BTS SIO
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link active">Accueil</a></li>
+                <li><a href="bts-sio.html" class="nav-link">BTS SIO</a></li>
+                <li><a href="entreprises.html" class="nav-link">Entreprises</a></li>
+                <li><a href="realisations.html" class="nav-link">Réalisations</a></li>
+                <li><a href="veille.html" class="nav-link">Veille Technologique</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
-        </nav>
-    </header>
+            <div class="mobile-menu" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="mobile-nav-menu" id="mobile-nav-menu">
+                <a href="index.html" class="mobile-nav-link active">Accueil</a>
+                <a href="bts-sio.html" class="mobile-nav-link">BTS SIO</a>
+                <a href="entreprises.html" class="mobile-nav-link">Entreprises</a>
+                <a href="realisations.html" class="mobile-nav-link">Réalisations</a>
+                <a href="veille.html" class="mobile-nav-link">Veille Technologique</a>
+                <a href="contact.html" class="mobile-nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
 
-    <section id="presentation">
-        <h2>Bienvenue sur mon portfolio !</h2>
-        <p>Je suis étudiant en BTS SIO, passionné par l'informatique, les systèmes, réseaux et la sécurité. Ce site regroupe mes expériences, projets et compétences développés au cours de ma formation.</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="floating-particle particle-1"></div>
+            <div class="floating-particle particle-2"></div>
+            <div class="floating-particle particle-3"></div>
+            <div class="floating-particle particle-4"></div>
+            <div class="floating-particle particle-5"></div>
+            <div class="floating-particle particle-6"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-avatar animate-float">
+                <i class="fas fa-user-tie"></i>
+                <div class="avatar-ring"></div>
+                <div class="avatar-ring-2"></div>
+            </div>
+            <h1 class="hero-title animate-slide-up">Kylian Brocail</h1>
+            <p class="hero-subtitle animate-slide-up delay-1">Étudiant BTS SIO SISR</p>
+            <p class="hero-description animate-slide-up delay-2">Spécialiste en Solutions d'Infrastructure, Systèmes et Réseaux</p>
+            
+            <div class="hero-buttons animate-slide-up delay-3">
+                <a href="realisations.html" class="btn btn-primary pulse-animation">
+                    <i class="fas fa-code"></i>
+                    Mes Réalisations
+                </a>
+                <a href="contact.html" class="btn btn-outline">
+                    <i class="fas fa-envelope"></i>
+                    Me Contacter
+                </a>
+            </div>
+
+            <div class="hero-scroll animate-bounce">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
     </section>
 
-    <section id="experiences">
-        <h2>Mes expériences en stage</h2>
-        <h3>1. Accord préalable</h3>
-        <p>Chaque stage effectué respecte un cadre défini par l'établissement et les entreprises partenaires, avec des objectifs d'apprentissage clairs.</p>
+    <!-- Présentation Section -->
+    <section class="section section-white" id="presentation">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animate-on-scroll">Présentation</h2>
+                <div class="section-divider animate-on-scroll"></div>
+                <p class="section-description animate-on-scroll">
+                    Découvrez mon parcours et mes passions dans le domaine de l'informatique
+                </p>
+            </div>
 
-        <h3>2. Lieux de stage</h3>
-        <ul>
-            <li>
-                <strong>Nom de l'entreprise 1</strong><br>
-                Missions réalisées : [Décrivez les missions ici].<br>
-                Compétences acquises : [Liste des compétences ici].
-            </li>
-            <li>
-                <strong>Nom de l'entreprise 2</strong><br>
-                Missions réalisées : [Décrivez les missions ici].<br>
-                Compétences acquises : [Liste des compétences ici].
-            </li>
-        </ul>
+            <div class="presentation-grid">
+                <div class="presentation-image animate-on-scroll slide-left">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800" 
+                             alt="Avatar gaming" class="profile-image">
+                        <div class="image-overlay">
+                            <div class="tech-icons">
+                                <i class="fab fa-windows tech-icon"></i>
+                                <i class="fab fa-linux tech-icon"></i>
+                                <i class="fas fa-server tech-icon"></i>
+                                <i class="fas fa-network-wired tech-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        <h3>3. Tableau récapitulatif</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>Période</th>
-                    <th>Entreprise</th>
-                    <th>Objectifs</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>[Date de début] - [Date de fin]</td>
-                    <td>Nom de l'entreprise</td>
-                    <td>[Objectifs de stage]</td>
-                </tr>
-            </tbody>
-        </table>
+                <div class="presentation-content animate-on-scroll slide-right">
+                    <div class="info-card hover-lift">
+                        <div class="info-header">
+                            <i class="fas fa-user-circle"></i>
+                            <h3>Informations personnelles</h3>
+                        </div>
+                        <ul class="info-list">
+                            <li class="info-item animate-list-item">
+                                <i class="fas fa-user"></i>
+                                <strong>Nom :</strong> Kylian Brocail
+                            </li>
+                            <li class="info-item animate-list-item">
+                                <i class="fas fa-birthday-cake"></i>
+                                <strong>Âge :</strong> 19 ans
+                            </li>
+                            <li class="info-item animate-list-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <strong>Formation :</strong> BTS SIO SISR - Lycée Gastionberger
+                            </li>
+                            <li class="info-item animate-list-item">
+                                <i class="fas fa-calendar"></i>
+                                <strong>Année :</strong> 2ème année
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="skills-card hover-lift">
+                        <div class="info-header">
+                            <i class="fas fa-heart"></i>
+                            <h3>Centres d'intérêt informatiques</h3>
+                        </div>
+                        <div class="skills-grid">
+                            <div class="skill-item hover-scale">
+                                <div class="skill-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <span>Cybersécurité</span>
+                            </div>
+                            <div class="skill-item hover-scale">
+                                <div class="skill-icon">
+                                    <i class="fas fa-network-wired"></i>
+                                </div>
+                                <span>Réseaux</span>
+                            </div>
+                            <div class="skill-item hover-scale">
+                                <div class="skill-icon">
+                                    <i class="fas fa-server"></i>
+                                </div>
+                                <span>Administration système</span>
+                            </div>
+                            <div class="skill-item hover-scale">
+                                <div class="skill-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <span>Automatisation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="description-text animate-on-scroll">
+                        <p>
+                            Passionné par les technologies de l'infrastructure et des réseaux, je poursuis 
+                            actuellement un BTS SIO option SISR. Mon objectif est de devenir un expert en 
+                            solutions d'infrastructure, avec une spécialisation en cybersécurité et 
+                            automatisation des systèmes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="projets">
-        <h2>Mes réalisations</h2>
-        <p>Voici quelques projets réalisés lors de ma formation :</p>
+    <!-- Quick Access Section -->
+    <section class="section section-gray">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animate-on-scroll">Accès Rapide</h2>
+                <div class="section-divider animate-on-scroll"></div>
+            </div>
 
-        <ul>
-            <li>
-                <h3>Paramétrage d'un réseau local</h3>
-                <p>Configuration des équipements réseau et des services associés.</p>
-            </li>
-            <li>
-                <h3>Création de tutoriels</h3>
-                <p>Rédaction de documents pour aider les utilisateurs à comprendre certains outils.</p>
-            </li>
-            <li>
-                <h3>Travaux spécifiques</h3>
-                <p>Travaux effectués lors des stages en entreprise.</p>
-            </li>
-        </ul>
+            <div class="quick-access-grid">
+                <a href="bts-sio.html" class="quick-card animate-on-scroll hover-lift-strong">
+                    <div class="quick-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>BTS SIO SISR</h3>
+                    <p>Découvrez ma formation et les compétences développées</p>
+                    <div class="quick-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+
+                <a href="entreprises.html" class="quick-card animate-on-scroll hover-lift-strong">
+                    <div class="quick-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Expériences</h3>
+                    <p>Mes stages et expériences professionnelles</p>
+                    <div class="quick-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+
+                <a href="realisations.html" class="quick-card animate-on-scroll hover-lift-strong">
+                    <div class="quick-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Réalisations</h3>
+                    <p>Projets techniques et accomplissements</p>
+                    <div class="quick-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+
+                <a href="veille.html" class="quick-card animate-on-scroll hover-lift-strong">
+                    <div class="quick-icon">
+                        <i class="fas fa-rss"></i>
+                    </div>
+                    <h3>Veille Techno</h3>
+                    <p>Articles et analyses technologiques</p>
+                    <div class="quick-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
     </section>
 
-    <section id="veille">
-        <h2>Veille technologique</h2>
-        <p>Dans cette section, je partage des articles et résumés sur des technologies actuelles en informatique :</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <div class="footer-info">
+                    <i class="fas fa-envelope"></i>
+                    <span>kylian.brocail@email.com</span>
+                </div>
+                <div class="footer-info">
+                    <i class="fas fa-phone"></i>
+                    <span>+33 6 12 34 56 78</span>
+                </div>
+                <div class="footer-info">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Paris, France</span>
+                </div>
+            </div>
 
-        <h3>Technologies émergentes et Google</h3>
-        <p>Google, fondé en 1998, est un leader dans des domaines comme l'IA, le cloud computing et la publicité en ligne.</p>
+            <div class="footer-section">
+                <h3>Formation</h3>
+                <p>BTS SIO option SISR</p>
+                <p class="footer-detail">Lycée Gastionberger</p>
+                <p class="footer-detail">2022 - 2024</p>
+            </div>
 
-        <h3>Compétences acquises</h3>
-        <ul>
-            <li>Administration de réseau</li>
-            <li>Gestion de bases de données (exemple : MySQL)</li>
-            <li>Outils de veille technologique</li>
-        </ul>
+            <div class="footer-section">
+                <h3>Réseaux</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-link github">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="social-link portfolio">
+                        <i class="fas fa-file-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
 
-        <h3>Certifications obtenues</h3>
-        <p>Exemple de certifications obtenues : Certificat de Cisco Networking, etc.</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Kylian B | Tous droits réservés</p>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Kylian Brocail - Portfolio BTS SIO SISR. Tous droits réservés.</p>
+        </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
