@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Réalisations et Projets Techniques | Portfolio Kylian Brocail BTS SIO SISR</title>
+    <meta name="description" content="Découvrez mes projets techniques et réalisations professionnelles en infrastructure, réseaux et cybersécurité durant mon BTS SIO SISR.">
+    <meta name="keywords" content="projets BTS SIO, réalisations techniques, infrastructure réseau, administration système, cybersécurité">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo animate-logo">
+                <i class="fas fa-laptop-code"></i>
+                Portfolio BTS SIO
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="bts-sio.html" class="nav-link">BTS SIO</a></li>
+                <li><a href="entreprises.html" class="nav-link">Entreprises</a></li>
+                <li><a href="realisations.html" class="nav-link active">Réalisations</a></li>
+                <li><a href="veille.html" class="nav-link">Veille Technologique</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="mobile-menu" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="mobile-nav-menu" id="mobile-nav-menu">
+                <a href="index.html" class="mobile-nav-link">Accueil</a>
+                <a href="bts-sio.html" class="mobile-nav-link">BTS SIO</a>
+                <a href="entreprises.html" class="mobile-nav-link">Entreprises</a>
+                <a href="realisations.html" class="mobile-nav-link active">Réalisations</a>
+                <a href="veille.html" class="mobile-nav-link">Veille Technologique</a>
+                <a href="contact.html" class="mobile-nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="hero-background">
+            <div class="floating-particle particle-1"></div>
+            <div class="floating-particle particle-2"></div>
+            <div class="floating-particle particle-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-icon animate-float">
+                <i class="fas fa-project-diagram"></i>
+            </div>
+            <h1 class="page-title animate-slide-up">Réalisations Professionnelles</h1>
+            <p class="page-subtitle animate-slide-up delay-1">Projets techniques et accomplissements</p>
+            <p class="page-description animate-slide-up delay-2">Découvrez mes projets en infrastructure, réseaux et cybersécurité</p>
+        </div>
+    </section>
+
+    <!-- Projects Filter -->
+    <section class="section section-white">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animate-on-scroll">Mes projets par catégorie</h2>
+                <div class="section-divider animate-on-scroll"></div>
+            </div>
+
+            <div class="filter-tabs animate-on-scroll">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th"></i>
+                    Tous les projets
+                </button>
+                <button class="filter-btn" data-filter="reseau">
+                    <i class="fas fa-network-wired"></i>
+                    Réseau
+                </button>
+                <button class="filter-btn" data-filter="serveur">
+                    <i class="fas fa-server"></i>
+                    Serveur
+                </button>
+                <button class="filter-btn" data-filter="securite">
+                    <i class="fas fa-shield-alt"></i>
+                    Sécurité
+                </button>
+                <button class="filter-btn" data-filter="monitoring">
+                    <i class="fas fa-chart-line"></i>
+                    Monitoring
+                </button>
+            </div>
+
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Projet 1 -->
+                <div class="project-card animate-on-scroll hover-lift-strong" data-category="reseau">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=400" alt="Migration Infrastructure Réseau">
+                        <div class="project-overlay">
+                            <button class="view-project-btn" onclick="openProjectModal('migration-reseau')">
+                                <i class="fas fa-eye"></i>
+                                Voir le projet
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Migration Infrastructure Réseau</h3>
+                            <div class="project-badges">
+                                <span class="project-badge reseau">RÉSEAU</span>
+                                <span class="difficulty-badge intermediate">Intermédiaire</span>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            Migration complète de l'infrastructure réseau d'une PME vers une architecture moderne avec VLAN segmentés et sécurisation renforcée.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Cisco</span>
+                            <span class="tech-tag">pfSense</span>
+                            <span class="tech-tag">VLAN</span>
+                            <span class="tech-tag">STP</span>
+                        </div>
+                        <div class="project-footer">
+                            <div class="project-duration">
+                                <i class="fas fa-clock"></i>
+                                <span>3 semaines</span>
+                            </div>
+                            <div class="project-status completed">
+                                <i class="fas fa-check-circle"></i>
+                                Terminé
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 2 -->
+                <div class="project-card animate-on-scroll hover-lift-strong" data-category="serveur">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1551808525-51a94da548ce?auto=format&fit=crop&w=800&h=400" alt="Déploiement Active Directory">
+                        <div class="project-overlay">
+                            <button class="view-project-btn" onclick="openProjectModal('active-directory')">
+                                <i class="fas fa-eye"></i>
+                                Voir le projet
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Déploiement Active Directory</h3>
+                            <div class="project-badges">
+                                <span class="project-badge serveur">SERVEUR</span>
+                                <span class="difficulty-badge advanced">Avancé</span>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            Installation et configuration d'un domaine Active Directory pour centraliser la gestion des utilisateurs et des ressources de l'entreprise.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Windows Server 2022</span>
+                            <span class="tech-tag">AD DS</span>
+                            <span class="tech-tag">GPO</span>
+                            <span class="tech-tag">DNS</span>
+                        </div>
+                        <div class="project-footer">
+                            <div class="project-duration">
+                                <i class="fas fa-clock"></i>
+                                <span>2 semaines</span>
+                            </div>
+                            <div class="project-status completed">
+                                <i class="fas fa-check-circle"></i>
+                                Terminé
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 3 -->
+                <div class="project-card animate-on-scroll hover-lift-strong" data-category="monitoring">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1563206767-5b18f218e8de?auto=format&fit=crop&w=800&h=400" alt="Système de Supervision">
+                        <div class="project-overlay">
+                            <button class="view-project-btn" onclick="openProjectModal('supervision')">
+                                <i class="fas fa-eye"></i>
+                                Voir le projet
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Système de Supervision</h3>
+                            <div class="project-badges">
+                                <span class="project-badge monitoring">MONITORING</span>
+                                <span class="difficulty-badge advanced">Avancé</span>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            Mise en place d'une solution de supervision complète pour monitorer l'infrastructure et alerter en cas d'incident.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">PRTG</span>
+                            <span class="tech-tag">Nagios</span>
+                            <span class="tech-tag">PowerShell</span>
+                            <span class="tech-tag">SNMP</span>
+                        </div>
+                        <div class="project-footer">
+                            <div class="project-duration">
+                                <i class="fas fa-clock"></i>
+                                <span>4 semaines</span>
+                            </div>
+                            <div class="project-status completed">
+                                <i class="fas fa-check-circle"></i>
+                                Terminé
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 4 -->
+                <div class="project-card animate-on-scroll hover-lift-strong" data-category="securite">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&h=400" alt="Audit Sécurité Réseau">
+                        <div class="project-overlay">
+                            <button class="view-project-btn" onclick="openProjectModal('audit-securite')">
+                                <i class="fas fa-eye"></i>
+                                Voir le projet
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Audit Sécurité Réseau</h3>
+                            <div class="project-badges">
+                                <span class="project-badge securite">SÉCURITÉ</span>
+                                <span class="difficulty-badge expert">Expert</span>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            Réalisation d'un audit complet de sécurité réseau avec tests d'intrusion et recommandations d'amélioration.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Nmap</span>
+                            <span class="tech-tag">Wireshark</span>
+                            <span class="tech-tag">OpenVAS</span>
+                            <span class="tech-tag">Metasploit</span>
+                        </div>
+                        <div class="project-footer">
+                            <div class="project-duration">
+                                <i class="fas fa-clock"></i>
+                                <span>3 semaines</span>
+                            </div>
+                            <div class="project-status completed">
+                                <i class="fas fa-check-circle"></i>
+                                Terminé
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 5 -->
+                <div class="project-card animate-on-scroll hover-lift-strong" data-category="serveur">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1597733336794-12d05021d510?auto=format&fit=crop&w=800&h=400" alt="Solution de Sauvegarde">
+                        <div class="project-overlay">
+                            <button class="view-project-btn" onclick="openProjectModal('sauvegarde')">
+                                <i class="fas fa-eye"></i>
+                                Voir le projet
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Solution de Sauvegarde</h3>
+                            <div class="project-badges">
+                                <span class="project-badge serveur">SERVEUR</span>
+                                <span class="difficulty-badge intermediate">Intermédiaire</span>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            Conception et déploiement d'une stratégie de sauvegarde automatisée avec planification et vérification d'intégrité.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Veeam</span>
+                            <span class="tech-tag">Robocopy</span>
+                            <span class="tech-tag">Task Scheduler</span>
+                            <span class="tech-tag">PowerShell</span>
+                        </div>
+                        <div class="project-footer">
+                            <div class="project-duration">
+                                <i class="fas fa-clock"></i>
+                                <span>2 semaines</span>
+                            </div>
+                            <div class="project-status completed">
+                                <i class="fas fa-check-circle"></i>
+                                Terminé
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 6 -->
+                <div class="project-card animate-on-scroll hover-lift-strong" data-category="reseau">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=800&h=400" alt="Scripts d'Automatisation">
+                        <div class="project-overlay">
+                            <button class="view-project-btn" onclick="openProjectModal('automatisation')">
+                                <i class="fas fa-eye"></i>
+                                Voir le projet
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Scripts d'Automatisation</h3>
+                            <div class="project-badges">
+                                <span class="project-badge reseau">SCRIPTS</span>
+                                <span class="difficulty-badge intermediate">Intermédiaire</span>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            Développement de scripts PowerShell et Bash pour automatiser les tâches d'administration et la maintenance système.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">PowerShell</span>
+                            <span class="tech-tag">Bash</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Windows API</span>
+                        </div>
+                        <div class="project-footer">
+                            <div class="project-duration">
+                                <i class="fas fa-clock"></i>
+                                <span>En continu</span>
+                            </div>
+                            <div class="project-status ongoing">
+                                <i class="fas fa-sync-alt"></i>
+                                En cours
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Developed -->
+    <section class="section section-gray">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animate-on-scroll">Compétences développées</h2>
+                <div class="section-divider animate-on-scroll"></div>
+                <p class="section-description animate-on-scroll">
+                    À travers ces projets, j'ai acquis et perfectionné de nombreuses compétences techniques.
+                </p>
+            </div>
+
+            <div class="skills-categories">
+                <div class="skill-category animate-on-scroll">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3>Réseaux & Infrastructure</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item-detailed">
+                            <span class="skill-name">Configuration Cisco</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item-detailed">
+                            <span class="skill-name">VLAN & Switching</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item-detailed">
+                            <span class="skill-name">Routage & Firewall</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category animate-on-scroll">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>Systèmes & Serveurs</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item-detailed">
+                            <span class="skill-name">Windows Server</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item-detailed">
+                            <span class="skill-name">Active Directory</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item-detailed">
+                            <span class="skill-name">Linux Administration</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category animate-on-scroll">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Cybersécurité</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item-detailed">
+                            <span class="skill-name">Audit de sécurité</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item-detailed">
+                            <span class="skill-name">Tests d'intrusion</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item-detailed">
+                            <span class="skill-name">Analyse réseau</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category animate-on-scroll">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Automatisation & Scripts</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item-detailed">
+                            <span class="skill-name">PowerShell</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item-detailed">
+                            <span class="skill-name">Bash/Shell</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item-detailed">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="65"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements -->
+    <section class="section section-white">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animate-on-scroll">Accomplissements</h2>
+                <div class="section-divider animate-on-scroll"></div>
+            </div>
+
+            <div class="achievements-grid">
+                <div class="achievement-card animate-on-scroll hover-lift">
+                    <div class="achievement-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Projet le plus complexe</h3>
+                    <p>Migration complète d'infrastructure réseau pour une PME de 50 utilisateurs</p>
+                    <div class="achievement-metric">
+                        <span class="metric-number">0%</span>
+                        <span class="metric-label">d'incidents post-migration</span>
+                    </div>
+                </div>
+
+                <div class="achievement-card animate-on-scroll hover-lift">
+                    <div class="achievement-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Efficacité</h3>
+                    <p>Automatisation des tâches répétitives grâce aux scripts développés</p>
+                    <div class="achievement-metric">
+                        <span class="metric-number">15h</span>
+                        <span class="metric-label">économisées par semaine</span>
+                    </div>
+                </div>
+
+                <div class="achievement-card animate-on-scroll hover-lift">
+                    <div class="achievement-icon">
+                        <i class="fas fa-shield-check"></i>
+                    </div>
+                    <h3>Sécurité</h3>
+                    <p>Audit de sécurité ayant identifié et corrigé des vulnérabilités critiques</p>
+                    <div class="achievement-metric">
+                        <span class="metric-number">12</span>
+                        <span class="metric-label">vulnérabilités détectées</span>
+                    </div>
+                </div>
+
+                <div class="achievement-card animate-on-scroll hover-lift">
+                    <div class="achievement-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Impact utilisateur</h3>
+                    <p>Amélioration significative de l'expérience utilisateur</p>
+                    <div class="achievement-metric">
+                        <span class="metric-number">70%</span>
+                        <span class="metric-label">de tickets en moins</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle"></h3>
+                <button class="modal-close" onclick="closeProjectModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Content will be dynamically loaded -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <div class="footer-info">
+                    <i class="fas fa-envelope"></i>
+                    <span>kylian.brocail@email.com</span>
+                </div>
+                <div class="footer-info">
+                    <i class="fas fa-phone"></i>
+                    <span>+33 6 12 34 56 78</span>
+                </div>
+                <div class="footer-info">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Paris, France</span>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Formation</h3>
+                <p>BTS SIO option SISR</p>
+                <p class="footer-detail">Lycée Gastionberger</p>
+                <p class="footer-detail">2022 - 2024</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Réseaux</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-link github">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="social-link portfolio">
+                        <i class="fas fa-file-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Kylian Brocail - Portfolio BTS SIO SISR. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        // Project data
+        const projectsData = {
+            'migration-reseau': {
+                title: 'Migration Infrastructure Réseau',
+                category: 'Réseau',
+                duration: '3 semaines',
+                context: 'TechSolutions SARL',
+                description: 'Migration complète de l\'infrastructure réseau d\'une PME de 50 employés vers une architecture moderne et sécurisée.',
+                objectives: [
+                    'Moderniser l\'infrastructure réseau obsolète',
+                    'Améliorer la sécurité avec segmentation VLAN',
+                    'Optimiser les performances réseau',
+                    'Réduire les coûts de maintenance'
+                ],
+                technologies: ['Cisco Catalyst 2960', 'pfSense', 'VLAN 802.1Q', 'STP', 'DHCP', 'DNS'],
+                achievements: [
+                    'Réduction de 60% des incidents réseau',
+                    'Amélioration de 40% des performances',
+                    'Mise en place de 5 VLANs sécurisés',
+                    'Formation de l\'équipe technique'
+                ],
+                challenges: 'Migration sans interruption de service pendant les heures ouvrables, compatibilité avec l\'équipement existant.'
+            },
+            'active-directory': {
+                title: 'Déploiement Active Directory',
+                category: 'Serveur',
+                duration: '2 semaines',
+                context: 'DataCorp Industries',
+                description: 'Installation et configuration d\'un domaine Active Directory pour centraliser la gestion des utilisateurs et ressources.',
+                objectives: [
+                    'Centraliser l\'authentification utilisateur',
+                    'Simplifier la gestion des droits d\'accès',
+                    'Déployer des stratégies de groupe',
+                    'Améliorer la sécurité des accès'
+                ],
+                technologies: ['Windows Server 2022', 'Active Directory Domain Services', 'Group Policy', 'DNS', 'DHCP'],
+                achievements: [
+                    'Migration de 120 comptes utilisateurs',
+                    'Déploiement de 15 GPO personnalisées',
+                    'Réduction de 70% des demandes support',
+                    'Mise en place de la sauvegarde AD'
+                ],
+                challenges: 'Formation des utilisateurs aux nouvelles procédures, migration progressive sans perturbation.'
+            },
+            'supervision': {
+                title: 'Système de Supervision',
+                category: 'Monitoring',
+                duration: '4 semaines',
+                context: 'DataCorp Industries',
+                description: 'Mise en place d\'une solution de monitoring complète pour surveiller l\'infrastructure IT en temps réel.',
+                objectives: [
+                    'Surveiller l\'infrastructure 24/7',
+                    'Détecter les incidents proactivement',
+                    'Générer des rapports de performance',
+                    'Optimiser la disponibilité des services'
+                ],
+                technologies: ['PRTG Network Monitor', 'Nagios', 'PowerShell', 'SNMP', 'WMI'],
+                achievements: [
+                    'Monitoring de 50+ équipements',
+                    'Réduction de 80% du MTTR',
+                    'Alertes automatiques par email/SMS',
+                    'Tableaux de bord en temps réel'
+                ],
+                challenges: 'Configuration des seuils d\'alerte pour éviter les fausses alertes, intégration avec l\'infrastructure existante.'
+            },
+            'audit-securite': {
+                title: 'Audit Sécurité Réseau',
+                category: 'Sécurité',
+                duration: '3 semaines',
+                context: 'DataCorp Industries',
+                description: 'Réalisation d\'un audit complet de sécurité réseau avec tests d\'intrusion et recommandations.',
+                objectives: [
+                    'Identifier les vulnérabilités réseau',
+                    'Tester la résistance aux intrusions',
+                    'Évaluer les politiques de sécurité',
+                    'Proposer un plan d\'amélioration'
+                ],
+                technologies: ['Nmap', 'Wireshark', 'OpenVAS', 'Metasploit', 'Nessus'],
+                achievements: [
+                    'Découverte de 12 vulnérabilités',
+                    'Test de 25 services exposés',
+                    'Rapport détaillé de 45 pages',
+                    'Plan de remédiation prioritisé'
+                ],
+                challenges: 'Tests non intrusifs en environnement de production, coordination avec les équipes métier.'
+            },
+            'sauvegarde': {
+                title: 'Solution de Sauvegarde',
+                category: 'Serveur',
+                duration: '2 semaines',
+                context: 'Projet personnel',
+                description: 'Conception et déploiement d\'une stratégie de sauvegarde automatisée pour protéger les données critiques.',
+                objectives: [
+                    'Automatiser les sauvegardes quotidiennes',
+                    'Garantir l\'intégrité des données',
+                    'Réduire les temps de restauration',
+                    'Respecter la politique de rétention'
+                ],
+                technologies: ['Veeam Backup & Replication', 'Robocopy', 'Task Scheduler', 'PowerShell'],
+                achievements: [
+                    'Sauvegarde de 2TB de données',
+                    'RTO réduit à 2 heures',
+                    'Tests de restauration mensuels',
+                    'Rétention sur 6 mois'
+                ],
+                challenges: 'Optimisation de la bande passante, vérification automatique de l\'intégrité des sauvegardes.'
+            },
+            'automatisation': {
+                title: 'Scripts d\'Automatisation',
+                category: 'Scripts',
+                duration: 'En continu',
+                context: 'Projets divers',
+                description: 'Développement de scripts pour automatiser les tâches répétitives d\'administration système.',
+                objectives: [
+                    'Automatiser les tâches répétitives',
+                    'Réduire les erreurs humaines',
+                    'Améliorer l\'efficacité opérationnelle',
+                    'Standardiser les procédures'
+                ],
+                technologies: ['PowerShell', 'Bash', 'Python', 'Task Scheduler', 'Cron'],
+                achievements: [
+                    '20+ scripts développés',
+                    'Économie de 15h/semaine',
+                    'Réduction de 90% des erreurs',
+                    'Documentation complète'
+                ],
+                challenges: 'Gestion des erreurs et exceptions, maintenance et évolution des scripts.'
+            }
+        };
+
+        // Page-specific JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeProjectFilters();
+            initializeSkillBars();
+            initializeAchievementCounters();
+            initializeProjectAnimations();
+        });
+
+        function initializeProjectFilters() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const filter = button.getAttribute('data-filter');
+                    
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    
+                    // Filter projects
+                    projectCards.forEach(card => {
+                        const category = card.getAttribute('data-category');
+                        
+                        if (filter === 'all' || category === filter) {
+                            card.style.display = 'block';
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(20px)';
+                            
+                            setTimeout(() => {
+                                card.style.transition = 'all 0.5s ease';
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 100);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+        }
+
+        function initializeSkillBars() {
+            const skillBars = document.querySelectorAll('.skill-progress');
+            
+            const skillObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const progressBar = entry.target;
+                        const targetProgress = progressBar.getAttribute('data-progress');
+                        
+                        setTimeout(() => {
+                            progressBar.style.width = targetProgress + '%';
+                        }, 300);
+                        
+                        skillObserver.unobserve(progressBar);
+                    }
+                });
+            });
+            
+            skillBars.forEach(bar => skillObserver.observe(bar));
+        }
+
+        function initializeAchievementCounters() {
+            const metricNumbers = document.querySelectorAll('.metric-number');
+            
+            const counterObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const element = entry.target;
+                        const text = element.textContent;
+                        const number = parseInt(text.match(/\d+/));
+                        
+                        if (number) {
+                            animateCounter(element, 0, number, 2000, text);
+                        }
+                        
+                        counterObserver.unobserve(element);
+                    }
+                });
+            });
+            
+            metricNumbers.forEach(element => counterObserver.observe(element));
+        }
+
+        function animateCounter(element, start, end, duration, originalText) {
+            const range = end - start;
+            const increment = range / (duration / 16);
+            let current = start;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                const currentNumber = Math.floor(current);
+                element.textContent = originalText.replace(/\d+/, currentNumber);
+                
+                if (current >= end) {
+                    element.textContent = originalText;
+                    clearInterval(timer);
+                }
+            }, 16);
+        }
+
+        function initializeProjectAnimations() {
+            const projectCards = document.querySelectorAll('.project-card');
+            
+            projectCards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.1}s`;
+            });
+        }
+
+        function openProjectModal(projectId) {
+            const project = projectsData[projectId];
+            if (!project) return;
+
+            const modal = document.getElementById('projectModal');
+            const title = document.getElementById('modalTitle');
+            const body = document.getElementById('modalBody');
+
+            title.textContent = project.title;
+            body.innerHTML = `
+                <div class="project-modal-content">
+                    <div class="project-modal-header">
+                        <div class="project-modal-meta">
+                            <span class="modal-category">${project.category}</span>
+                            <span class="modal-duration">${project.duration}</span>
+                            <span class="modal-context">${project.context}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="project-modal-section">
+                        <h4><i class="fas fa-info-circle"></i> Description</h4>
+                        <p>${project.description}</p>
+                    </div>
+
+                    <div class="project-modal-section">
+                        <h4><i class="fas fa-bullseye"></i> Objectifs</h4>
+                        <ul class="modal-list">
+                            ${project.objectives.map(obj => `<li><i class="fas fa-check"></i> ${obj}</li>`).join('')}
+                        </ul>
+                    </div>
+
+                    <div class="project-modal-section">
+                        <h4><i class="fas fa-cogs"></i> Technologies utilisées</h4>
+                        <div class="modal-tech-grid">
+                            ${project.technologies.map(tech => `<span class="modal-tech-tag">${tech}</span>`).join('')}
+                        </div>
+                    </div>
+
+                    <div class="project-modal-section">
+                        <h4><i class="fas fa-trophy"></i> Réalisations</h4>
+                        <ul class="modal-list">
+                            ${project.achievements.map(achievement => `<li><i class="fas fa-star"></i> ${achievement}</li>`).join('')}
+                        </ul>
+                    </div>
+
+                    <div class="project-modal-section">
+                        <h4><i class="fas fa-exclamation-triangle"></i> Défis relevés</h4>
+                        <p>${project.challenges}</p>
+                    </div>
+                </div>
+            `;
+
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeProjectModal() {
+            const modal = document.getElementById('projectModal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        window.addEventListener('click', function(e) {
+            const modal = document.getElementById('projectModal');
+            if (e.target === modal) {
+                closeProjectModal();
+            }
+        });
+    </script>
+
+    <style>
+        /* Page-specific styles */
+        .filter-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .filter-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 1.5rem;
+            border: 2px solid var(--border-color);
+            background: white;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            color: var(--text-color);
+        }
+
+        .filter-btn:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .filter-btn.active {
+            background: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-light);
+            border: 1px solid var(--border-color);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .project-image {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.1);
+        }
+
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(37, 99, 235, 0.9), rgba(245, 158, 11, 0.9));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+
+        .view-project-btn {
+            background: white;
+            color: var(--primary-color);
+            border: none;
+            padding: 1rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .view-project-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .project-header h3 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+            margin: 0;
+        }
+
+        .project-badges {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .project-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .project-badge.reseau { background: #dbeafe; color: #1e40af; }
+        .project-badge.serveur { background: #dcfce7; color: #166534; }
+        .project-badge.securite { background: #fecaca; color: #dc2626; }
+        .project-badge.monitoring { background: #f3e8ff; color: #7c3aed; }
+
+        .difficulty-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .difficulty-badge.intermediate { background: #fed7aa; color: #c2410c; }
+        .difficulty-badge.advanced { background: #fde68a; color: #92400e; }
+        .difficulty-badge.expert { background: #fca5a5; color: #b91c1c; }
+
+        .project-description {
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tech-tag {
+            background: var(--bg-gray);
+            color: var(--text-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .project-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        .project-duration {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .project-status {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .project-status.completed {
+            color: #059669;
+        }
+
+        .project-status.ongoing {
+            color: #d97706;
+        }
+
+        .skills-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow-light);
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .category-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .category-header h3 {
+            color: var(--secondary-color);
+            margin: 0;
+        }
+
+        .skill-item-detailed {
+            margin-bottom: 1.5rem;
+        }
+
+        .skill-name {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--text-color);
+        }
+
+        .skill-bar {
+            width: 100%;
+            height: 8px;
+            background: var(--bg-gray);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: var(--gradient-accent);
+            width: 0%;
+            transition: width 1.5s ease-out;
+            border-radius: 4px;
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .achievement-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: var(--shadow-light);
+            border: 1px solid var(--border-color);
+        }
+
+        .achievement-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-accent);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: white;
+            margin: 0 auto 1rem;
+        }
+
+        .achievement-metric {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .metric-number {
+            display: block;
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 0.25rem;
+        }
+
+        .metric-label {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            border-radius: 20px;
+            max-width: 800px;
+            max-height: 90vh;
+            overflow-y: auto;
+            width: 90%;
+            animation: slideUp 0.3s ease-out;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 2rem 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .modal-header h3 {
+            margin: 0;
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--text-light);
+            transition: color 0.3s ease;
+        }
+
+        .modal-close:hover {
+            color: var(--primary-color);
+        }
+
+        .modal-body {
+            padding: 2rem;
+        }
+
+        .project-modal-header {
+            margin-bottom: 2rem;
+        }
+
+        .project-modal-meta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .modal-category,
+        .modal-duration,
+        .modal-context {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .modal-category {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .modal-duration,
+        .modal-context {
+            background: var(--bg-gray);
+            color: var(--text-color);
+        }
+
+        .project-modal-section {
+            margin-bottom: 2rem;
+        }
+
+        .project-modal-section h4 {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+        }
+
+        .project-modal-section h4 i {
+            color: var(--primary-color);
+        }
+
+        .modal-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .modal-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            padding: 0.5rem 0;
+        }
+
+        .modal-list li i {
+            color: var(--accent-color);
+            font-size: 0.9rem;
+        }
+
+        .modal-tech-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .modal-tech-tag {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -40%);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .filter-tabs {
+                justify-content: stretch;
+                flex-direction: column;
+            }
+
+            .filter-btn {
+                justify-content: center;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+
+            .project-badges {
+                flex-direction: row;
+                gap: 0.5rem;
+            }
+
+            .skills-categories {
+                grid-template-columns: 1fr;
+            }
+
+            .achievements-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-content {
+                width: 95%;
+                margin: 1rem;
+            }
+
+            .modal-header,
+            .modal-body {
+                padding: 1.5rem;
+            }
+
+            .project-modal-meta {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</body>
+</html>
