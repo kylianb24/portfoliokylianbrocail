@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Veille Technologique - Articles et Analyses IT | Portfolio Kylian Brocail</title>
+    <meta name="description" content="Découvrez mes articles de veille technologique sur les innovations en infrastructure, cybersécurité et systèmes informatiques.">
+    <meta name="keywords" content="veille technologique, articles IT, cybersécurité, cloud computing, infrastructure réseau, analyse technologique">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo animate-logo">
+                <i class="fas fa-laptop-code"></i>
+                Portfolio BTS SIO
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="bts-sio.html" class="nav-link">BTS SIO</a></li>
+                <li><a href="entreprises.html" class="nav-link">Entreprises</a></li>
+                <li><a href="realisations.html" class="nav-link">Réalisations</a></li>
+                <li><a href="veille.html" class="nav-link active">Veille Technologique</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="mobile-menu" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="mobile-nav-menu" id="mobile-nav-menu">
+                <a href="index.html" class="mobile-nav-link">Accueil</a>
+                <a href="bts-sio.html" class="mobile-nav-link">BTS SIO</a>
+                <a href="entreprises.html" class="mobile-nav-link">Entreprises</a>
+                <a href="realisations.html" class="mobile-nav-link">Réalisations</a>
+                <a href="veille.html" class="mobile-nav-link active">Veille Technologique</a>
+                <a href="contact.html" class="mobile-nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="hero-background">
+            <div class="floating-particle particle-1"></div>
+            <div class="floating-particle particle-2"></div>
+            <div class="floating-particle particle-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-icon animate-float">
+                <i class="fas fa-rss"></i>
+            </div>
+            <h1 class="page-title animate-slide-up">Veille Technologique</h1>
+            <p class="page-subtitle animate-slide-up delay-1">Articles et analyses technologiques</p>
+            <p class="page-description animate-slide-up delay-2">Suivez l'évolution des technologies en infrastructure et cybersécurité</p>
+        </div>
+    </section>
+
+    <!-- Blog Categories -->
+    <section class="section section-white">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animate-on-scroll">Mes articles par thématique</h2>
+                <div class="section-divider animate-on-scroll"></div>
+            </div>
+
+            <div class="blog-categories">
+                <button class="category-filter active" data-category="all">
+                    <i class="fas fa-th"></i>
+                    <span>Tous les articles</span>
+                </button>
+                <button class="category-filter" data-category="cybersecurite">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Cybersécurité</span>
+                </button>
+                <button class="category-filter" data-category="cloud">
+                    <i class="fas fa-cloud"></i>
+                    <span>Cloud Computing</span>
+                </button>
+                <button class="category-filter" data-category="automatisation">
+                    <i class="fas fa-robot"></i>
+                    <span>Automatisation</span>
+                </button>
+                <button class="category-filter" data-category="ia">
+                    <i class="fas fa-brain"></i>
+                    <span>Intelligence Artificielle</span>
+                </button>
+                <button class="category-filter" data-category="securite">
+                    <i class="fas fa-lock"></i>
+                    <span>Sécurité</span>
+                </button>
+            </div>
+
+            <div class="blog-grid" id="blogGrid">
+                <!-- Article 1 -->
+                <article class="blog-card animate-on-scroll hover-lift" data-category="cybersecurite">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&h=400" alt="Cybersécurité Zero Trust">
+                        <div class="blog-overlay">
+                            <span class="reading-time">
+                                <i class="fas fa-clock"></i>
+                                5 min de lecture
+                            </span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category cybersecurite">Cybersécurité</span>
+                            <span class="blog-date">
+                                <i class="fas fa-calendar"></i>
+                                20 Mars 2024
+                            </span>
+                        </div>
+                        <h3 class="blog-title">Cybersécurité : Zero Trust Architecture en 2024</h3>
+                        <p class="blog-excerpt">
+                            Découvrez comment l'architecture Zero Trust révolutionne la cybersécurité moderne et ses implications pour les entreprises.
+                        </p>
+                        <div class="blog-tags">
+                            <span class="blog-tag">#zero-trust</span>
+                            <span class="blog-tag">#cybersécurité</span>
+                            <span class="blog-tag">#architecture</span>
+                        </div>
+                        <button class="read-more-btn" onclick="openBlogModal('article1')">
+                            Lire l'article
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="blog-card animate-on-scroll hover-lift" data-category="cloud">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=400" alt="Google Cloud Platform">
+                        <div class="blog-overlay">
+                            <span class="reading-time">
+                                <i class="fas fa-clock"></i>
+                                7 min de lecture
+                            </span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category cloud">Cloud Computing</span>
+                            <span class="blog-date">
+                                <i class="fas fa-calendar"></i>
+                                19 Mars 2024
+                            </span>
+                        </div>
+                        <h3 class="blog-title">Google Cloud Platform : Révolution de l'Infrastructure</h3>
+                        <p class="blog-excerpt">
+                            Exploration complète des services Google Cloud et leur impact transformateur sur l'infrastructure IT moderne.
+                        </p>
+                        <div class="blog-tags">
+                            <span class="blog-tag">#google-cloud</span>
+                            <span class="blog-tag">#gcp</span>
+                            <span class="blog-tag">#infrastructure</span>
+                        </div>
+                        <button class="read-more-btn" onclick="openBlogModal('article2')">
+                            Lire l'article
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="blog-card animate-on-scroll hover-lift" data-category="automatisation">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=400" alt="Automatisation Réseau">
+                        <div class="blog-overlay">
+                            <span class="reading-time">
+                                <i class="fas fa-clock"></i>
+                                6 min de lecture
+                            </span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category automatisation">Automatisation</span>
+                            <span class="blog-date">
+                                <i class="fas fa-calendar"></i>
+                                18 Mars 2024
+                            </span>
+                        </div>
+                        <h3 class="blog-title">Automatisation Réseau : Ansible et DevOps</h3>
+                        <p class="blog-excerpt">
+                            Guide complet pour maîtriser l'automatisation réseau avec Ansible et les meilleures pratiques DevOps.
+                        </p>
+                        <div class="blog-tags">
+                            <span class="blog-tag">#ansible</span>
+                            <span class="blog-tag">#automatisation</span>
+                            <span class="blog-tag">#devops</span>
+                        </div>
+                        <button class="read-more-btn" onclick="openBlogModal('article3')">
+                            Lire l'article
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="blog-card animate-on-scroll hover-lift" data-category="ia">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1555255707-c07966088b7b?auto=format&fit=crop&w=800&h=400" alt="Intelligence Artificielle">
+                        <div class="blog-overlay">
+                            <span class="reading-time">
+                                <i class="fas fa-clock"></i>
+                                8 min de lecture
+                            </span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category ia">Intelligence Artificielle</span>
+                            <span class="blog-date">
+                                <i class="fas fa-calendar"></i>
+                                17 Mars 2024
+                            </span>
+                        </div>
+                        <h3 class="blog-title">Intelligence Artificielle en Administration Système</h3>
+                        <p class="blog-excerpt">
+                            Comment l'intelligence artificielle révolutionne l'administration système et les opérations IT.
+                        </p>
+                        <div class="blog-tags">
+                            <span class="blog-tag">#ia</span>
+                            <span class="blog-tag">#aiops</span>
+                            <span class="blog-tag">#administration</span>
+                        </div>
+                        <button class="read-more-btn" onclick="openBlogModal('article4')">
+                            Lire l'article
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Article 5 -->
+                <article class="blog-card animate-on-scroll hover-lift" data-category="securite">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&h=400" alt="Sécurité Conteneurs">
+                        <div class="blog-overlay">
+                            <span class="reading-time">
+                                <i class="fas fa-clock"></i>
+                                6 min de lecture
+                            </span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category securite">Sécurité</span>
+                            <span class="blog-date">
+                                <i class="fas fa-calendar"></i>
+                                16 Mars 2024
+                            </span>
+                        </div>
+                        <h3 class="blog-title">Sécurité des Conteneurs et Kubernetes</h3>
+                        <p class="blog-excerpt">
+                            Stratégies essentielles pour sécuriser vos déploiements de conteneurs et clusters Kubernetes.
+                        </p>
+                        <div class="blog-tags">
+                            <span class="blog-tag">#kubernetes</span>
+                            <span class="blog-tag">#conteneurs</span>
+                            <span class="blog-tag">#sécurité</span>
+                        </div>
+                        <button class="read-more-btn" onclick="openBlogModal('article5')">
+                            Lire l'article
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Article 6 -->
+                <article class="blog-card animate-on-scroll hover-lift" data-category="cloud">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=400" alt="Edge Computing">
+                        <div class="blog-overlay">
+                            <span class="reading-time">
+                                <i class="fas fa-clock"></i>
+                                5 min de lecture
+                            </span>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category cloud">Cloud Computing</span>
+                            <span class="blog-date">
+                                <i class="fas fa-calendar"></i>
+                                15 Mars 2024
+                            </span>
+                        </div>
+                        <h3 class="blog-title">Edge Computing : L'avenir de l'Infrastructure</h3>
+                        <p class="blog-excerpt">
+                            Analyse de l'impact de l'Edge Computing sur les architectures modernes et les nouveaux défis techniques.
+                        </p>
+                        <div class="blog-tags">
+                            <span class="blog-tag">#edge-computing</span>
+                            <span class="blog-tag">#infrastructure</span>
+                            <span class="blog-tag">#latence</span>
+                        </div>
+                        <button class="read-more-btn" onclick="openBlogModal('article6')">
+                            Lire l'article
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Veille Sources -->
+    <section class="section section-gray">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animate-on-scroll">Sources de veille</h2>
+                <div class="section-divider animate-on-scroll"></div>
+                <p class="section-description animate-on-scroll">
+                    Découvrez les sources que j'utilise pour rester à jour sur les évolutions technologiques.
+                </p>
+            </div>
+
+            <div class="sources-grid">
+                <div class="source-category animate-on-scroll">
+                    <div class="source-header">
+                        <div class="source-icon">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <h3>Publications Officielles</h3>
+                    </div>
+                    <div class="sources-list">
+                        <div class="source-item hover-scale">
+                            <i class="fas fa-shield-alt"></i>
+                            <div class="source-info">
+                                <h4>ANSSI</h4>
+                                <p>Agence nationale de la sécurité des systèmes d'information</p>
+                            </div>
+                        </div>
+                        <div class="source-item hover-scale">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <div class="source-info">
+                                <h4>CERT-FR</h4>
+                                <p>Centre gouvernemental de veille d'alerte et de réponse</p>
+                            </div>
+                        </div>
+                        <div class="source-item hover-scale">
+                            <i class="fas fa-book"></i>
+                            <div class="source-info">
+                                <h4>NIST</h4>
+                                <p>Standards et guidelines en cybersécurité</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="source-category animate-on-scroll">
+                    <div class="source-header">
+                        <div class="source-icon">
+                            <i class="fas fa-headphones"></i>
+                        </div>
+                        <h3>Podcasts Spécialisés</h3>
+                    </div>
+                    <div class="sources-list">
+                        <div class="source-item hover-scale">
+                            <i class="fas fa-microphone"></i>
+                            <div class="source-info">
+                                <h4>NoLimitSecu</h4>
+                                <p>Podcast français sur la cybersécurité</p>
+                            </div>
+                        </div>
+                        <div class="source-item hover-scale">
+                            <i class="fas fa-podcast"></i>
+                            <div class="source-info">
+                                <h4>Darknet Diaries</h4>
+                                <p>Histoires vraies de cybercriminalité</p>
+                            </div>
+                        </div>
+                        <div class="source-item hover-scale">
+                            <i class="fas fa-network-wired"></i>
+                            <div class="source-info">
+                                <h4>Packet Pushers</h4>
+                                <p>Podcast sur les technologies réseau</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="source-category animate-on-scroll">
+                    <div class="source-header">
+                        <div class="source-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Communautés</h3>
+                    </div>
+                    <div class="sources-list">
+                        <div class="source-item hover-scale">
+                            <i class="fab fa-reddit"></i>
+                            <div class="source-info">
+                                <h4>Reddit r/networking</h4>
+                                <p>Communauté de professionnels réseaux</p>
+                            </div>
+                        </div>
+                        <div class="source-item hover-scale">
+                            <i class="fab fa-stack-overflow"></i>
+                            <div class="source-info">
+                                <h4>Stack Overflow</h4>
+                                <p>Questions-réponses techniques</p>
+                            </div>
+                        </div>
+                        <div class="source-item hover-scale">
+                            <i class="fab fa-discord"></i>
+                            <div class="source-info">
+                                <h4>Discord IT France</h4>
+                                <p>Communauté française des professionnels IT</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="source-category animate-on-scroll">
+                    <div class="source-header">
+                        <div class="source-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Formation Continue</h3>
+                    </div>
+                    <div class="sources-list">
+                        <div class="source-item hover-scale">
+                            <i class="fas fa-globe"></i>
+                            <div class="source-info">
+                                <h4>Cisco Learning</h4>
+                                <p>Formations et certifications Cisco</p>
+                            </div>
+                        </div>
+                        <div class="source-item hover-scale">
+                            <i class="fab fa-microsoft"></i>
+                            <div class="source-info">
+                                <h4>Microsoft Learn</h4>
+                                <p>Plateforme d'apprentissage Microsoft</p>
+                            </div>
+                        </div>
+                        <div class="source-item hover-scale">
+                            <i class="fas fa-cloud"></i>
+                            <div class="source-info">
+                                <h4>VMware Education</h4>
+                                <p>Formations en virtualisation et cloud</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Competences Developed -->
+    <section class="section section-white">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title animate-on-scroll">Compétences développées par la veille</h2>
+                <div class="section-divider animate-on-scroll"></div>
+            </div>
+
+            <div class="competences-veille">
+                <div class="competence-veille-card animate-on-scroll hover-lift">
+                    <div class="competence-veille-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Analyse critique</h3>
+                    <p>Capacité à évaluer la pertinence et la fiabilité des informations techniques trouvées.</p>
+                </div>
+
+                <div class="competence-veille-card animate-on-scroll hover-lift">
+                    <div class="competence-veille-icon">
+                        <i class="fas fa-filter"></i>
+                    </div>
+                    <h3>Synthèse d'information</h3>
+                    <p>Compétence pour extraire l'essentiel de sources multiples et créer des synthèses cohérentes.</p>
+                </div>
+
+                <div class="competence-veille-card animate-on-scroll hover-lift">
+                    <div class="competence-veille-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Analyse de tendances</h3>
+                    <p>Identification des évolutions technologiques majeures et de leur impact sur l'infrastructure.</p>
+                </div>
+
+                <div class="competence-veille-card animate-on-scroll hover-lift">
+                    <div class="competence-veille-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Innovation</h3>
+                    <p>Adaptation rapide aux nouvelles technologies et proposition de solutions innovantes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Modal -->
+    <div id="blogModal" class="modal">
+        <div class="modal-content blog-modal-content">
+            <div class="modal-header">
+                <h3 id="blogModalTitle"></h3>
+                <button class="modal-close" onclick="closeBlogModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="blogModalBody">
+                <!-- Content will be dynamically loaded -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <div class="footer-info">
+                    <i class="fas fa-envelope"></i>
+                    <span>kylian.brocail@email.com</span>
+                </div>
+                <div class="footer-info">
+                    <i class="fas fa-phone"></i>
+                    <span>+33 6 12 34 56 78</span>
+                </div>
+                <div class="footer-info">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Paris, France</span>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Formation</h3>
+                <p>BTS SIO option SISR</p>
+                <p class="footer-detail">Lycée Gastionberger</p>
+                <p class="footer-detail">2022 - 2024</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Réseaux</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-link github">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="social-link portfolio">
+                        <i class="fas fa-file-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Kylian Brocail - Portfolio BTS SIO SISR. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        // Blog data
+        const blogData = {
+            'article1': {
+                title: 'Cybersécurité : Zero Trust Architecture en 2024',
+                category: 'Cybersécurité',
+                date: '20 Mars 2024',
+                readTime: '5 min',
+                content: `
+                    <p>L'architecture Zero Trust devient la nouvelle norme en cybersécurité. Cette approche révolutionnaire considère que rien n'est digne de confiance par défaut, que ce soit à l'intérieur ou à l'extérieur du périmètre réseau.</p>
+                    
+                    <h4>Principes fondamentaux</h4>
+                    <p>Contrairement aux modèles traditionnels qui faisaient confiance aux utilisateurs une fois connectés au réseau interne, Zero Trust vérifie constamment chaque tentative d'accès. Les principes fondamentaux incluent :</p>
+                    <ul>
+                        <li>Vérification explicite de chaque utilisateur et appareil</li>
+                        <li>Accès avec privilèges minimum nécessaires</li>
+                        <li>Hypothèse de compromission constante</li>
+                    </ul>
+                    
+                    <h4>Technologies clés</h4>
+                    <p>Les technologies qui permettent l'implémentation du Zero Trust comprennent :</p>
+                    <ul>
+                        <li>Authentification multifacteur (MFA)</li>
+                        <li>Chiffrement bout en bout</li>
+                        <li>Micro-segmentation réseau</li>
+                        <li>Analyse comportementale alimentée par l'IA</li>
+                    </ul>
+                    
+                    <h4>Impact sur les entreprises</h4>
+                    <p>Microsoft, Google et Amazon ont tous adopté ces principes dans leurs infrastructures cloud. Cette adoption massive démontre l'efficacité et la nécessité de cette approche dans le contexte actuel des cybermenaces.</p>
+                `
+            },
+            'article2': {
+                title: 'Google Cloud Platform : Révolution de l\'Infrastructure',
+                category: 'Cloud Computing',
+                date: '19 Mars 2024',
+                readTime: '7 min',
+                content: `
+                    <p>Google Cloud Platform (GCP) transforme la façon dont les entreprises gèrent leur infrastructure IT. Avec plus de 100 services disponibles, GCP offre des solutions pour le calcul, le stockage, l'analyse de données et l'intelligence artificielle.</p>
+                    
+                    <h4>Services phares</h4>
+                    <p>Les services les plus utilisés incluent :</p>
+                    <ul>
+                        <li>Compute Engine pour les machines virtuelles</li>
+                        <li>Kubernetes Engine pour l'orchestration de conteneurs</li>
+                        <li>BigQuery pour l'analyse de données massives</li>
+                        <li>Cloud Storage pour le stockage d'objets</li>
+                    </ul>
+                    
+                    <h4>Infrastructure mondiale</h4>
+                    <p>L'infrastructure mondiale de Google, avec ses centres de données répartis sur tous les continents, garantit une latence minimale et une haute disponibilité. Cette infrastructure s'appuie sur le même réseau qui alimente Google Search et YouTube.</p>
+                    
+                    <h4>Innovations récentes</h4>
+                    <p>Les innovations récentes incluent l'intégration de l'IA dans tous les services, avec Vertex AI qui simplifie le déploiement de modèles de machine learning. La tarification à l'usage et les remises sur engagement permettent une optimisation des coûts significative.</p>
+                `
+            },
+            'article3': {
+                title: 'Automatisation Réseau : Ansible et DevOps',
+                category: 'Automatisation',
+                date: '18 Mars 2024',
+                readTime: '6 min',
+                content: `
+                    <p>L'automatisation réseau avec Ansible révolutionne la gestion des infrastructures. Cette technologie permet d'automatiser la configuration, le déploiement et la maintenance des équipements réseau sans agent.</p>
+                    
+                    <h4>Playbooks Ansible</h4>
+                    <p>Les playbooks Ansible utilisent YAML pour décrire l'état désiré du système, rendant l'automatisation accessible aux administrateurs système. Cette approche déclarative permet de :</p>
+                    <ul>
+                        <li>Standardiser les configurations</li>
+                        <li>Réduire les erreurs humaines</li>
+                        <li>Accélérer les déploiements</li>
+                        <li>Faciliter la documentation</li>
+                    </ul>
+                    
+                    <h4>Intégration multi-constructeurs</h4>
+                    <p>L'intégration avec des équipements Cisco, Juniper et autres constructeurs permet une gestion unifiée du parc réseau. Les modules spécialisés pour chaque constructeur facilitent l'adoption.</p>
+                    
+                    <h4>Bonnes pratiques</h4>
+                    <p>Les bonnes pratiques comprennent l'utilisation de rôles réutilisables, la gestion des secrets avec Ansible Vault et l'intégration avec des outils de CI/CD comme GitLab pour un pipeline DevOps complet.</p>
+                `
+            },
+            'article4': {
+                title: 'Intelligence Artificielle en Administration Système',
+                category: 'Intelligence Artificielle',
+                date: '17 Mars 2024',
+                readTime: '8 min',
+                content: `
+                    <p>L'IA transforme l'administration système avec des capacités prédictives et d'auto-réparation. Les systèmes modernes utilisent le machine learning pour analyser les logs, détecter les anomalies et prédire les pannes avant qu'elles surviennent.</p>
+                    
+                    <h4>Analyse prédictive</h4>
+                    <p>Microsoft System Center et VMware vRealize intègrent des algorithmes d'IA pour optimiser automatiquement les performances. L'analyse prédictive permet de :</p>
+                    <ul>
+                        <li>Anticiper les problèmes de capacité</li>
+                        <li>Planifier les maintenances préventives</li>
+                        <li>Optimiser l'allocation des ressources</li>
+                        <li>Réduire les temps d'arrêt</li>
+                    </ul>
+                    
+                    <h4>Support automatisé</h4>
+                    <p>Les chatbots alimentés par l'IA révolutionnent le support utilisateur avec des résolutions automatiques de tickets. Ces systèmes peuvent traiter 80% des demandes courantes sans intervention humaine.</p>
+                    
+                    <h4>AIOps</h4>
+                    <p>L'AIOps (Artificial Intelligence for IT Operations) combine big data, machine learning et automatisation pour améliorer la disponibilité des services. Cette approche permet une gestion proactive plutôt que réactive des infrastructures.</p>
+                `
+            },
+            'article5': {
+                title: 'Sécurité des Conteneurs et Kubernetes',
+                category: 'Sécurité',
+                date: '16 Mars 2024',
+                readTime: '6 min',
+                content: `
+                    <p>La sécurité des conteneurs devient critique avec l'adoption massive de Kubernetes. Les vulnérabilités peuvent survenir à plusieurs niveaux : images de base, code applicatif, configuration Kubernetes et runtime.</p>
+                    
+                    <h4>Bonnes pratiques de sécurité</h4>
+                    <p>Les bonnes pratiques incluent :</p>
+                    <ul>
+                        <li>Utilisation d'images minimales (distroless)</li>
+                        <li>Signature des images de conteneurs</li>
+                        <li>Analyse statique du code</li>
+                        <li>Policies de sécurité Pod Security Standards</li>
+                    </ul>
+                    
+                    <h4>Outils de sécurité</h4>
+                    <p>Les outils comme Falco détectent les comportements anormaux à l'exécution, tandis que Trivy scanne les vulnérabilités dans les images. Ces outils s'intègrent dans les pipelines CI/CD pour une sécurité continue.</p>
+                    
+                    <h4>Gestion des secrets</h4>
+                    <p>La gestion des secrets avec HashiCorp Vault ou AWS Secrets Manager évite l'exposition d'informations sensibles. L'implémentation de Network Policies contrôle la communication entre pods pour limiter la surface d'attaque.</p>
+                `
+            },
+            'article6': {
+                title: 'Edge Computing : L\'avenir de l\'Infrastructure',
+                category: 'Cloud Computing',
+                date: '15 Mars 2024',
+                readTime: '5 min',
+                content: `
+                    <p>L'Edge Computing révolutionne l'architecture des systèmes distribués en rapprochant le traitement des données de leur source. Cette approche réduit drastiquement la latence et améliore les performances des applications critiques.</p>
+                    
+                    <h4>Avantages de l'Edge Computing</h4>
+                    <p>Les principaux avantages incluent :</p>
+                    <ul>
+                        <li>Réduction de la latence (< 10ms)</li>
+                        <li>Diminution de la bande passante utilisée</li>
+                        <li>Amélioration de la confidentialité des données</li>
+                        <li>Continuité de service en cas de panne réseau</li>
+                    </ul>
+                    
+                    <h4>Cas d'usage</h4>
+                    <p>L'Edge Computing trouve ses applications dans l'IoT industriel, les véhicules autonomes, la réalité augmentée et les systèmes de surveillance temps réel. Ces usages nécessitent des temps de réponse ultra-rapides.</p>
+                    
+                    <h4>Défis techniques</h4>
+                    <p>Les défis incluent la gestion distribuée des ressources, la sécurité des nœuds edge et l'orchestration des workloads. Kubernetes at the Edge et des solutions comme AWS Wavelength adressent ces problématiques.</p>
+                `
+            }
+        };
+
+        // Page-specific JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeBlogFilters();
+            initializeBlogAnimations();
+        });
+
+        function initializeBlogFilters() {
+            const filterButtons = document.querySelectorAll('.category-filter');
+            const blogCards = document.querySelectorAll('.blog-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const category = button.getAttribute('data-category');
+                    
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    
+                    // Filter blog posts
+                    blogCards.forEach(card => {
+                        const cardCategory = card.getAttribute('data-category');
+                        
+                        if (category === 'all' || cardCategory === category) {
+                            card.style.display = 'block';
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(20px)';
+                            
+                            setTimeout(() => {
+                                card.style.transition = 'all 0.5s ease';
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 100);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+        }
+
+        function initializeBlogAnimations() {
+            const blogCards = document.querySelectorAll('.blog-card');
+            
+            blogCards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.1}s`;
+            });
+
+            // Add hover effects
+            blogCards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    const image = card.querySelector('.blog-image img');
+                    image.style.transform = 'scale(1.1)';
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    const image = card.querySelector('.blog-image img');
+                    image.style.transform = 'scale(1)';
+                });
+            });
+        }
+
+        function openBlogModal(articleId) {
+            const article = blogData[articleId];
+            if (!article) return;
+
+            const modal = document.getElementById('blogModal');
+            const title = document.getElementById('blogModalTitle');
+            const body = document.getElementById('blogModalBody');
+
+            title.textContent = article.title;
+            body.innerHTML = `
+                <div class="blog-modal-header">
+                    <div class="blog-modal-meta">
+                        <span class="modal-category">${article.category}</span>
+                        <span class="modal-date">${article.date}</span>
+                        <span class="modal-read-time">${article.readTime} de lecture</span>
+                    </div>
+                </div>
+                <div class="blog-modal-body">
+                    ${article.content}
+                </div>
+            `;
+
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeBlogModal() {
+            const modal = document.getElementById('blogModal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        window.addEventListener('click', function(e) {
+            const modal = document.getElementById('blogModal');
+            if (e.target === modal) {
+                closeBlogModal();
+            }
+        });
+    </script>
+
+    <style>
+        /* Page-specific styles */
+        .blog-categories {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .category-filter {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 1.5rem;
+            border: 2px solid var(--border-color);
+            background: white;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            color: var(--text-color);
+        }
+
+        .category-filter:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .category-filter.active {
+            background: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-light);
+            border: 1px solid var(--border-color);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .blog-image {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .blog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .blog-overlay {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+        }
+
+        .reading-time {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .blog-content {
+            padding: 1.5rem;
+        }
+
+        .blog-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .blog-category {
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .blog-category.cybersecurite { background: #fecaca; color: #dc2626; }
+        .blog-category.cloud { background: #dbeafe; color: #1e40af; }
+        .blog-category.automatisation { background: #f3e8ff; color: #7c3aed; }
+        .blog-category.ia { background: #fed7aa; color: #c2410c; }
+        .blog-category.securite { background: #dcfce7; color: #166534; }
+
+        .blog-date {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            color: var(--text-light);
+            font-size: 0.8rem;
+        }
+
+        .blog-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .blog-excerpt {
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .blog-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .blog-tag {
+            background: var(--bg-gray);
+            color: var(--text-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.75rem;
+        }
+
+        .read-more-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .read-more-btn:hover {
+            background: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        .sources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .source-category {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow-light);
+        }
+
+        .source-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .source-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .source-header h3 {
+            color: var(--secondary-color);
+            margin: 0;
+        }
+
+        .source-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .source-item:hover {
+            background: var(--bg-gray);
+            transform: translateX(5px);
+        }
+
+        .source-item i {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-top: 0.25rem;
+        }
+
+        .source-info h4 {
+            margin-bottom: 0.25rem;
+            color: var(--secondary-color);
+        }
+
+        .source-info p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .competences-veille {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .competence-veille-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: var(--shadow-light);
+            border: 1px solid var(--border-color);
+        }
+
+        .competence-veille-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-accent);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: white;
+            margin: 0 auto 1rem;
+        }
+
+        .competence-veille-card h3 {
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .competence-veille-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Blog Modal Styles */
+        .blog-modal-content {
+            max-width: 900px;
+        }
+
+        .blog-modal-header {
+            margin-bottom: 2rem;
+        }
+
+        .blog-modal-meta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .modal-category,
+        .modal-date,
+        .modal-read-time {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .modal-category {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .modal-date,
+        .modal-read-time {
+            background: var(--bg-gray);
+            color: var(--text-color);
+        }
+
+        .blog-modal-body {
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+
+        .blog-modal-body h4 {
+            margin: 2rem 0 1rem;
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+        }
+
+        .blog-modal-body ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .blog-modal-body li {
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .blog-categories {
+                flex-direction: column;
+            }
+
+            .category-filter {
+                justify-content: center;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .blog-meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+
+            .sources-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .competences-veille {
+                grid-template-columns: 1fr;
+            }
+
+            .blog-modal-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</body>
+</html>
