@@ -1,20 +1,25 @@
 name: Auto Update
+
 on:
   workflow_dispatch:
 
 jobs:
   update:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
       - name: Make change
         run: |
           echo "Modifié par un agent" >> README.md
+
       - name: Commit and push
         run: |
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
-          git add .
-          git commit -m "Update by agent"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/kylianb24/portfoliokylianbrocail.git
+          git add README.md
+          git commit -m "Mise à jour automatique"
           git push
