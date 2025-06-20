@@ -8,8 +8,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GH_PAT }}
+          fetch-depth: 0  # important pour éviter les problèmes de HEAD détaché
+
+      - name: Set up git config
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Make change
         run: |
@@ -19,9 +27,6 @@ jobs:
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git remote set-url origin https://x-access-token:$GH_PAT@github.com/kylianb24/portfoliokylianbrocail.git
           git add README.md
-          git commit -m "Mise à jour automatique" || echo "Rien à commit"
-          git push origin main
+          git commit -m "Mise à jour automatique" || echo "Aucun changement à commit"
+          git push origin HEAD:main
