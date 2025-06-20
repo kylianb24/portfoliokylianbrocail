@@ -13,13 +13,15 @@ jobs:
 
       - name: Make change
         run: |
-          echo "Modifié par un agent" >> README.md
+          echo "Modifié par un agent le $(date)" >> README.md
 
       - name: Commit and push
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git remote set-url origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/kylianb24/portfoliokylianbrocail.git
+          git remote set-url origin https://x-access-token:$GH_PAT@github.com/kylianb24/portfoliokylianbrocail.git
           git add README.md
           git commit -m "Mise à jour automatique" || echo "Rien à commit"
-          git push
+          git push origin main
