@@ -291,10 +291,11 @@ body {
     color: var(--text-color);
     font-weight: 500;
     padding: 0.5rem 1rem;
-    border-radius: 25px;
+     border-radius: 9999px; 
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    white-space: nowrap;
 }
 
 .nav-link::before {
@@ -307,7 +308,7 @@ body {
     background: var(--gradient-primary);
     transition: all 0.3s ease;
     z-index: -1;
-    border-radius: 25px;
+    border-radius: 9999px;
 }
 
 .nav-link:hover::before,
