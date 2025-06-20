@@ -29,4 +29,6 @@ jobs:
         run: |
           git add README.md
           git commit -m "Mise à jour automatique" || echo "Aucun changement à commit"
-          git push origin HEAD:main
+          git pull --rebase origin main
+          git push https://x-access-token:$GH_PAT@github.com/kylianb24/portfoliokylianbrocail.git HEAD:main
+
