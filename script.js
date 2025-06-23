@@ -192,7 +192,9 @@ function initializeParticleSystem() {
     const hero = document.querySelector('.hero');
     if (!hero) return;
 
-    createFloatingElements(hero);
+    hero.addEventListener('mouseenter', () => {
+        createFloatingElements(hero);
+    });
     createMouseFollower();
 }
 
@@ -217,6 +219,7 @@ function createFloatingElement(container, content) {
         z-index: 1;
         animation: float 8s ease-in-out infinite;
         animation-delay: ${Math.random() * 2}s;
+        transform: translate(-50%, -50%);
     `;
     
     // Position aléatoire
