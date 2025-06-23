@@ -1192,3 +1192,18 @@ body {
 .mt-1 { margin-top: 0.5rem; }
 .mt-2 { margin-top: 1rem; }
 .mt-3 { margin-top: 1.5rem; }
+
+/* Correction visibilité du texte dans la section Informations personnelles */
+.info-card,
+.info-list,
+.info-item,
+.info-item * {
+  color: #222 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.animate-list-item {
+  opacity: 1 !important;
+  transform: none !important;
+}
