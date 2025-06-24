@@ -1216,12 +1216,43 @@ body {
   transform: none !important;
 }
 
-/* Solution A – Masquer les bulles créées en HTML */
-.bubbles,
-.bubble,
-.circle,
-.background-animation {
-    display: none !important;
-    opacity: 0 !important;
-    pointer-events: none !important;
+/* Ajout à ton style.css pour corriger les bulles de navigation */
+.nav-link {
+    display: inline-block; /* important pour bien gérer le padding et centrage */
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 9999px;
+    background-color: transparent;
+    color: var(--text-color);
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-primary);
+    z-index: -1;
+    border-radius: 9999px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover::before,
+.nav-link.active::before {
+    left: 0;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: white;
+    transform: translateY(-2px);
 }
