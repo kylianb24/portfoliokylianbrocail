@@ -1215,3 +1215,13 @@ body {
   opacity: 1 !important;
   transform: none !important;
 }
+
+/* Solution A – Masquer les bulles créées en HTML */
+.bubbles,
+.bubble,
+.circle,
+.background-animation {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
