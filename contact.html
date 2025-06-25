@@ -158,102 +158,36 @@
                             <p>Remplissez le formulaire ci-dessous et je vous répondrai dans les plus brefs délais.</p>
                         </div>
 
-                        <form id="contactForm" class="contact-form">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="firstName" class="form-label">
-                                        <i class="fas fa-user"></i>
-                                        Prénom *
-                                    </label>
-                                    <input type="text" id="firstName" name="firstName" class="form-input" required placeholder="Votre prénom">
-                                    <div class="form-error" id="firstNameError"></div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="lastName" class="form-label">
-                                        <i class="fas fa-user"></i>
-                                        Nom *
-                                    </label>
-                                    <input type="text" id="lastName" name="lastName" class="form-input" required placeholder="Votre nom">
-                                    <div class="form-error" id="lastNameError"></div>
-                                </div>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="email" class="form-label">
-                                        <i class="fas fa-envelope"></i>
-                                        Email *
-                                    </label>
-                                    <input type="email" id="email" name="email" class="form-input" required placeholder="votre.email@exemple.com">
-                                    <div class="form-error" id="emailError"></div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="phone" class="form-label">
-                                        <i class="fas fa-phone"></i>
-                                        Téléphone
-                                    </label>
-                                    <input type="tel" id="phone" name="phone" class="form-input" placeholder="+33 6 12 34 56 78">
-                                    <div class="form-error" id="phoneError"></div>
-                                </div>
+                        <form id="contactForm" class="contact-form" action="https://formsubmit.co/contact@kylianbrocail.site" method="POST">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_next" value="merci.html">
+                            <div class="form-group">
+                                <label for="name" class="form-label">
+                                    <i class="fas fa-user"></i>
+                                    Nom
+                                </label>
+                                <input type="text" id="name" name="name" class="form-input" required placeholder="Votre nom">
                             </div>
 
                             <div class="form-group">
-                                <label for="company" class="form-label">
-                                    <i class="fas fa-building"></i>
-                                    Entreprise / Organisation
+                                <label for="email" class="form-label">
+                                    <i class="fas fa-envelope"></i>
+                                    Email
                                 </label>
-                                <input type="text" id="company" name="company" class="form-input" placeholder="Nom de votre entreprise (optionnel)">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="subject" class="form-label">
-                                    <i class="fas fa-tag"></i>
-                                    Sujet *
-                                </label>
-                                <select id="subject" name="subject" class="form-select" required>
-                                    <option value="">Sélectionnez un sujet</option>
-                                    <option value="stage">Opportunité de stage</option>
-                                    <option value="emploi">Offre d'emploi</option>
-                                    <option value="projet">Collaboration sur un projet</option>
-                                    <option value="formation">Question sur ma formation</option>
-                                    <option value="conseil">Demande de conseil</option>
-                                    <option value="autre">Autre</option>
-                                </select>
-                                <div class="form-error" id="subjectError"></div>
+                                <input type="email" id="email" name="email" class="form-input" required placeholder="votre.email@exemple.com">
                             </div>
 
                             <div class="form-group">
                                 <label for="message" class="form-label">
                                     <i class="fas fa-comment"></i>
-                                    Message *
+                                    Message
                                 </label>
-                                <textarea id="message" name="message" class="form-textarea" required placeholder="Décrivez votre demande ou projet..." rows="6"></textarea>
-                                <div class="form-error" id="messageError"></div>
-                                <small class="char-counter">
-                                    <span id="charCount">0</span>/1000 caractères
-                                </small>
+                                <textarea id="message" name="message" class="form-textarea" required placeholder="Votre message" rows="6"></textarea>
                             </div>
 
-                            <div class="form-group">
-                                <label class="checkbox-label">
-                                    <input type="checkbox" id="privacy" name="privacy" required>
-                                    <span class="checkbox-checkmark"></span>
-                                    J'accepte que mes données soient utilisées pour me recontacter concernant ma demande *
-                                </label>
-                                <div class="form-error" id="privacyError"></div>
-                            </div>
-
-                            <button type="submit" class="submit-btn">
-                                <span class="btn-text">
-                                    <i class="fas fa-paper-plane"></i>
-                                    Envoyer le message
-                                </span>
-                                <span class="btn-loading">
-                                    <i class="fas fa-spinner fa-spin"></i>
-                                    Envoi en cours...
-                                </span>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                                Envoyer
                             </button>
                         </form>
                     </div>
@@ -398,193 +332,8 @@
     <script>
         // Page-specific JavaScript
         document.addEventListener('DOMContentLoaded', function() {
-            initializeContactForm();
             initializeFAQ();
-            initializeCharCounter();
         });
-
-        function initializeContactForm() {
-            const form = document.getElementById('contactForm');
-            const submitBtn = form.querySelector('.submit-btn');
-            
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Validate form
-                if (validateForm()) {
-                    submitForm();
-                }
-            });
-
-            // Real-time validation
-            const inputs = form.querySelectorAll('input, select, textarea');
-            inputs.forEach(input => {
-                input.addEventListener('blur', () => validateField(input));
-                input.addEventListener('input', () => clearError(input));
-            });
-        }
-
-        function validateForm() {
-            let isValid = true;
-            const form = document.getElementById('contactForm');
-            
-            // Clear previous errors
-            clearAllErrors();
-            
-            // Validate first name
-            const firstName = form.firstName.value.trim();
-            if (firstName.length < 2) {
-                showError('firstNameError', 'Le prénom doit contenir au moins 2 caractères');
-                isValid = false;
-            }
-            
-            // Validate last name
-            const lastName = form.lastName.value.trim();
-            if (lastName.length < 2) {
-                showError('lastNameError', 'Le nom doit contenir au moins 2 caractères');
-                isValid = false;
-            }
-            
-            // Validate email
-            const email = form.email.value.trim();
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                showError('emailError', 'Veuillez entrer une adresse email valide');
-                isValid = false;
-            }
-            
-            // Validate phone (if provided)
-            const phone = form.phone.value.trim();
-            if (phone && !/^[\+]?[0-9\s\-\(\)]{10,}$/.test(phone)) {
-                showError('phoneError', 'Veuillez entrer un numéro de téléphone valide');
-                isValid = false;
-            }
-            
-            // Validate subject
-            if (!form.subject.value) {
-                showError('subjectError', 'Veuillez sélectionner un sujet');
-                isValid = false;
-            }
-            
-            // Validate message
-            const message = form.message.value.trim();
-            if (message.length < 10) {
-                showError('messageError', 'Le message doit contenir au moins 10 caractères');
-                isValid = false;
-            } else if (message.length > 1000) {
-                showError('messageError', 'Le message ne peut pas dépasser 1000 caractères');
-                isValid = false;
-            }
-            
-            // Validate privacy checkbox
-            if (!form.privacy.checked) {
-                showError('privacyError', 'Vous devez accepter l\'utilisation de vos données');
-                isValid = false;
-            }
-            
-            return isValid;
-        }
-
-        function validateField(field) {
-            const value = field.value.trim();
-            const fieldName = field.name;
-            
-            clearError(field);
-            
-            switch(fieldName) {
-                case 'firstName':
-                case 'lastName':
-                    if (value.length < 2) {
-                        showError(fieldName + 'Error', 'Ce champ doit contenir au moins 2 caractères');
-                    }
-                    break;
-                case 'email':
-                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    if (!emailRegex.test(value)) {
-                        showError('emailError', 'Veuillez entrer une adresse email valide');
-                    }
-                    break;
-                case 'phone':
-                    if (value && !/^[\+]?[0-9\s\-\(\)]{10,}$/.test(value)) {
-                        showError('phoneError', 'Veuillez entrer un numéro de téléphone valide');
-                    }
-                    break;
-                case 'message':
-                    if (value.length < 10) {
-                        showError('messageError', 'Le message doit contenir au moins 10 caractères');
-                    } else if (value.length > 1000) {
-                        showError('messageError', 'Le message ne peut pas dépasser 1000 caractères');
-                    }
-                    break;
-            }
-        }
-
-        function showError(errorId, message) {
-            const errorElement = document.getElementById(errorId);
-            errorElement.textContent = message;
-            errorElement.style.display = 'block';
-            
-            // Add error class to input
-            const input = errorElement.previousElementSibling;
-            if (input) {
-                input.classList.add('error');
-            }
-        }
-
-        function clearError(field) {
-            const errorId = field.name + 'Error';
-            const errorElement = document.getElementById(errorId);
-            if (errorElement) {
-                errorElement.style.display = 'none';
-                field.classList.remove('error');
-            }
-        }
-
-        function clearAllErrors() {
-            const errorElements = document.querySelectorAll('.form-error');
-            errorElements.forEach(error => error.style.display = 'none');
-            
-            const inputs = document.querySelectorAll('.form-input, .form-select, .form-textarea');
-            inputs.forEach(input => input.classList.remove('error'));
-        }
-
-        function submitForm() {
-            const submitBtn = document.querySelector('.submit-btn');
-            const btnText = submitBtn.querySelector('.btn-text');
-            const btnLoading = submitBtn.querySelector('.btn-loading');
-            
-            // Show loading state
-            btnText.style.display = 'none';
-            btnLoading.style.display = 'flex';
-            submitBtn.disabled = true;
-            
-            // Simulate form submission
-            setTimeout(() => {
-                // Reset button
-                btnText.style.display = 'flex';
-                btnLoading.style.display = 'none';
-                submitBtn.disabled = false;
-                
-                // Show success message
-                showSuccessMessage();
-                
-                // Reset form
-                document.getElementById('contactForm').reset();
-                updateCharCounter();
-            }, 2000);
-        }
-
-        function showSuccessMessage() {
-            const successOverlay = document.getElementById('successMessage');
-            successOverlay.style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeSuccessMessage() {
-            const successOverlay = document.getElementById('successMessage');
-            successOverlay.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
 
         function initializeFAQ() {
             const faqItems = document.querySelectorAll('.faq-item');
@@ -614,28 +363,7 @@
             });
         }
 
-        function initializeCharCounter() {
-            const messageInput = document.getElementById('message');
-            const charCount = document.getElementById('charCount');
-            
-            messageInput.addEventListener('input', updateCharCounter);
-            
-            function updateCharCounter() {
-                const count = messageInput.value.length;
-                charCount.textContent = count;
-                
-                if (count > 900) {
-                    charCount.style.color = '#dc2626';
-                } else if (count > 800) {
-                    charCount.style.color = '#f59e0b';
-                } else {
-                    charCount.style.color = '#64748b';
-                }
-            }
-            
-            // Make updateCharCounter global
-            window.updateCharCounter = updateCharCounter;
-        }
+        
 
         function downloadCV() {
             // Simulate CV download
