@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaire d'inscription</title>
+  <style>
+    /* Styles de base pour un rendu épuré et responsive */
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      min-height: 100vh;
+    }
+    form {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    input[type=email] {
+      padding: 0.75rem 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    button {
+      padding: 0.75rem 1rem;
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #1e40af;
+    }
+    .error-message, .success-message {
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+      display: none;
+    }
+    .error-message { color: #dc2626; }
+    .success-message { color: #16a34a; text-align: center; }
+    @media (max-width: 500px) {
+      body { padding: 0.5rem; }
+      form { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Formulaire simple avec un champ email -->
+  <form id="emailForm" action="https://formspree.io/f/moqpnjdz" method="POST">
+    <label for="email">Adresse email</label>
+    <input type="email" id="email" name="email" required>
+    <div id="error" class="error-message"></div>
+    <button type="submit">Envoyer</button>
+  </form>
+  <div id="success" class="success-message"></div>
+
+  <script>
+    // Gestion de la soumission du formulaire
+    document.getElementById('emailForm').addEventListener('submit', function(e) {
+      e.preventDefault(); // Empêche le rechargement de la page
+
+      const emailInput = document.getElementById('email');
+      const errorDiv = document.getElementById('error');
+      const successDiv = document.getElementById('success');
+      const emailValue = emailInput.value.trim();
+
+      // Validation simple de l'adresse email
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(emailValue)) {
+        errorDiv.textContent = 'Veuillez entrer une adresse email valide.';
+        errorDiv.style.display = 'block';
+        successDiv.style.display = 'none';
+        return;
+      }
+
+      errorDiv.style.display = 'none';
+
+      // Envoi à Formspree via fetch
+      fetch('https://formspree.io/f/moqpnjdz', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(this)
+      }).then(function() {
+        // Affiche un message temporaire de succès
+        successDiv.textContent = 'Merci, votre message a bien été envoyé !';
+        successDiv.style.display = 'block';
+
+        // Redirection vers index.html après 2.5 secondes
+        setTimeout(function() {
+          window.location.href = 'index.html';
+        }, 2500);
+      }).catch(function() {
+        errorDiv.textContent = 'Une erreur est survenue. Veuillez réessayer.';
+        errorDiv.style.display = 'block';
+      });
+    });
+  </script>
+</body>
+</html>
